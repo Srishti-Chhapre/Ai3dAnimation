@@ -5,7 +5,7 @@
 
 body{
    background-image: url(./Image/background.jpg);
-   background-size: auto 100%;
+   background-size: 100% 100%;
    background-color: rgba(255, 255, 255, 0.5); 
    background-blend-mode: overlay; 
 }
@@ -30,7 +30,7 @@ body{
 }
 .banner .product .soda{
     background: var(--url) var(--left) 0,
-    url(./Image/ball.PNG);
+    url(Image/ball.png);
     background-size: auto 100%;
     width: 480px;
     aspect-ratio: 5 / 5;
