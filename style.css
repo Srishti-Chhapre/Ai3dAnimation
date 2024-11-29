@@ -1,22 +1,23 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
-   background-image: url(./Image/background.jpg);
-   background-size: auto 100%;
-   background-color: rgba(255, 255, 255, 0.5); 
-   background-blend-mode: overlay; 
+body {
+    background-image: url(./Image/background.jpg);
+    /* background-size: auto 100%; */
+    background-size: 100% 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    background-blend-mode: overlay;
 }
-.banner{
+
+.banner {
     height: 100vh;
     overflow: hidden;
     position: relative;
 }
 
-.banner .product{
-    /* background-color: red; */
+.banner .product {
     width: 417px;
     height: 510px;
     position: absolute;
@@ -25,12 +26,12 @@ body{
     transform: translateX(-50%);
     z-index: 3;
     transition: 0.7s;
-    --left:0px;
+    --left: 0px;
     display: flex;
 }
-.banner .product .soda{
-    background: var(--url) var(--left) 0,
-    url(./Image/ball.PNG);
+
+.banner .product .soda {
+    background: var(--url) var(--left) 0, url(./Image/ball.PNG);
     background-size: auto 100%;
     width: 480px;
     aspect-ratio: 5 / 5;
@@ -38,25 +39,28 @@ body{
     mask-image: url(./Image/ball.PNG);
     mask-size: auto 100%;
     transition: 0.7s;
-    position:absolute;
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
-.banner .product:hover{
-    --left:-1000px;
+
+.banner .product:hover {
+    --left: -1000px;
     transform: translateX(-50%) translateY(-100px);
 }
-.banner .rock{
+
+.banner .rock {
     position: absolute;
     inset: 0 0 0 0;
     pointer-events: none;
 }
-.banner .rock img{
+
+.banner .rock img {
     position: absolute;
     transition: 0.7s;
 }
 
-.banner .rock img:nth-child(1){
+.banner .rock img:nth-child(1) {
     height: 170px;
     left: 50%;
     transform: translateX(-50%);
@@ -64,35 +68,110 @@ body{
     z-index: 1;
 }
 
-.banner:has(.product:hover) .rock img:nth-child(1){
+.banner:has(.product:hover) .rock img:nth-child(1) {
     transform: translateX(-50%) translateY(50px);
 }
-.banner .rock img:nth-child(2){
+
+.banner .rock img:nth-child(2) {
     height: 50%;
     left: 0;
     bottom: 0;
 }
 
-.banner:has(.product:hover) .rock img:nth-child(2){
+.banner:has(.product:hover) .rock img:nth-child(2) {
     transform: translateX(-100px) translateY(100px);
 }
 
-.banner .rock img:nth-child(3){
+.banner .rock img:nth-child(3) {
     height: 100%;
     right: 0;
     bottom: -100px;
     rotate: -25px;
 }
 
-.banner:has(.product:hover) .rock img:nth-child(3){
+.banner:has(.product:hover) .rock img:nth-child(3) {
     transform: translateX(100px) translateY(100px);
 }
 
-
-.banner .product .soda:nth-child(2){
+.banner .product .soda:nth-child(2) {
     opacity: 0;
 }
 
-.banner .product:hover .soda:nth-child(2){
+.banner .product:hover .soda:nth-child(2) {
     opacity: 1;
+}
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .banner .product {
+        width: 300px;
+        height: 400px;
+        bottom: 50px;
+    }
+
+    .banner .product .soda {
+        width:317px;;
+        aspect-ratio: 1 / 1;
+    }
+
+    .banner .rock img:nth-child(1) {
+        height: 120px;
+    }
+
+    .banner .rock img:nth-child(2) {
+        height: 40%;
+    }
+
+    .banner .rock img:nth-child(3) {
+        height: 80%;
+        bottom: -50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner .product {
+        width: 250px;
+        height: 289px;
+        bottom: 30px;
+    }
+
+    .banner .rock img:nth-child(1) {
+        height: 121px;
+    }
+
+    .banner .rock img:nth-child(2) {
+        height: 48%;
+    }
+
+    .banner .rock img:nth-child(3) {
+        height: 79%;
+        bottom: -30px;
+    }
+    .banner .product .soda {
+        width: 240px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .banner .product {
+        width: 250px;
+        height: 289px;
+        bottom: 30px;
+    }
+
+    .banner .rock img:nth-child(1) {
+        height: 115px;
+    }
+
+    .banner .rock img:nth-child(2) {
+        height: 44%;
+    }
+
+    .banner .rock img:nth-child(3) {
+        height: 65%;
+        bottom: -30px;
+    }
+    .banner .product .soda {
+        width: 240px;
+    }
 }
