@@ -30,12 +30,12 @@ body{
 }
 .banner .product .soda{
     background: var(--url) var(--left) 0,
-    url(Image/ball.PNG);
+    url(Image/ball.png);
     background-size: auto 100%;
     width: 480px;
     aspect-ratio: 5 / 5;
     background-blend-mode: multiply;
-    mask-image: url(Image/ball.PNG);
+    mask-image: url(Image/ball.png);
     mask-size: auto 100%;
     transition: 0.7s;
     position:absolute;
