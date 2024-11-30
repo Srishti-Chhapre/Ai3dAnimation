@@ -124,6 +124,7 @@ body{
     .banner .rock img:nth-child(3) {
         height: 80%;
         bottom: -50px;
+        right: -30px;
     }
 }
 
@@ -149,8 +150,23 @@ body{
     .banner .product .soda {
         width: 240px;
     }
+    body {
+        background-size: cover;
+        background-position: center top; 
+    }
 }
-
+@media screen and (max-width: 480px) and (min-width:410px) {
+    .banner .rock img:nth-child(1) {
+        height: 103px;
+    }
+    .banner .rock img:nth-child(3) {
+        height: 43% !important;
+        bottom: -30px !important;
+    }
+    .banner .rock img:nth-child(2) {
+        height: 21%;
+    }
+}
 @media screen and (max-width: 410px) {
     .banner .product {
         width: 250px;
@@ -174,3 +190,4 @@ body{
         width: 240px;
     }
 }
+
